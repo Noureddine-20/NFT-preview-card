@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --main-radius: 10px;
+    --main-color: hsl(178, 100%, 50%);
+}
+body {
+    font-size: 18px;
+    font-family: "outfit";
+    background-color: hsl(217, 54%, 11%);
+}
+.container {
+    background-color: hsl(216, 50%, 16%);
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: var(--main-radius);
+    box-shadow: 0px 15px 1px 10px hsl(216deg 50% 14%), 
+    0px 0px 0px 30px hsl(215deg 50% 13%);
+}
+.container .img {
+    width: 280px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .img img {
+    width: 100%;
+    border-radius: var(--main-radius);
+}
+.container .img svg {
+    z-index: -1;
+    position: absolute;
+}
+.container .img:hover svg {
+    z-index: 2;
+}
+.container .img .opacity {
+    background-color: var(--main-color);
+    opacity: 0.5;
+    width: 278px;
+    height: 278px;
+    position: absolute;
+    border-radius: var(--main-radius);
+    z-index: -1;
+}
+.container .img:hover .opacity {
+    z-index: 1;
+}
+.container h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1em;
+}
+.container h1:hover {
+    color: var(--main-color);
+}
+.container > p {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: hsl(215, 32%, 27%);
+}
+.container .info {
+    display: flex;
+    justify-content: space-between;
+}
+.container .info .flex {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+.container .info .code {
+    color: var(--main-color);
+}
+.container .info .time {
+    color: hsl(215, 32%, 27%);
+}
+.container .info svg {
+    margin-right: 10px;
+}
+.container hr {
+    width: 100%;
+    border: 0.5px hsl(215, 32%, 27%) solid;
+}
+.container .footer {
+    display: flex;
+    align-items: center;
+}
+.container .footer img {
+    width: 31px;
+    border: white solid 1px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.container .footer p {
+    font-size: 0.9em;
+    color: hsl(215, 32%, 27%);
+}
+.container .footer p span {
+    color: hsl(0, 0%, 100%);
+}
+.container .footer p span:hover {
+    color: var(--main-color);
+}
+@media (max-width: 767px) {
+    .container {
+        box-shadow: none;
+    }
+}
